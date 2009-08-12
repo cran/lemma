@@ -1,0 +1,19 @@
+desc <- packageDescription("LEMMA")
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", desc$Date)
+vers <- paste("R package version", desc$Version)
+     
+citEntry(entry="Manual",
+    title = "LEMMA: Laplace approximated EM Microarray Analysis",
+    author = personList(as.person("Haim Bar"),
+                        as.person("James Booth"),
+                        as.person("Elizabeth D. Schifano"),
+                        as.person("Martin T. Wells")),
+    year = year,
+    note = vers,
+     
+    textVersion =
+         paste("Haim Bar, James Booth, Elizabeth D. Schifano,",
+               "Martin T. Wells",
+               year,
+               "). LEMMA: Laplace approximated EM Microarray Analysis. ",
+               vers, ".", sep=""))
