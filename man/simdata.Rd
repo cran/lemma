@@ -8,8 +8,8 @@ Data simulation using the LEMMA model.  The true parameter values are:
 Both groups have 6 replicates (`subjects'), and 2,000 `genes'.
 }
 \usage{simdata}
-\format{A data frame containing 2,000 rows and 14 columns.  The first column contains
-the gene IDs, the second column contains the gene names.  Columns 3-8 contain the
-reponses for the 6 control samples, and columns 9-14 contain the
-reponses for the 6 treatment samples.}
+\format{A data frame containing 2,000 rows and 14 columns.  The first column
+contains the gene IDs, the second column contains the gene names.
+Columns 3-8 contain the reponses for the 6 control samples, and columns 9-14
+contain the reponses for the 6 treatment samples.}
 \keyword{datasets}

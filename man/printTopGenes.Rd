@@ -4,9 +4,9 @@
 \title{LEMMA - printing the most likely nonnull genes}
 \description{
 This program prints `topgenes' genes sorted in ascending order by their 
-posterior null probability, or by their adjusted p-value. Use a positive integer,
-or `all' to print all the genes, or `nonnull' to print only the genes that are
-declared nonnull with the given local fdr or FDR cut-off values. 
+posterior null probability, or by their adjusted p-value. Use a positive
+integer, or `all' to print all the genes, or `nonnull' to print only the genes
+that are declared nonnull with the given local fdr or FDR cut-off values. 
 It is executed by \code{lemma()}, but can be executed later separately, if the
 user wants to print a different number of `topgenes', without running the EM
 algorithm again.
@@ -31,8 +31,8 @@ to print only the genes that are declared nonnull with the given local fdr or
 FDR cut-off values. Default=`nonnull'.}
  \item{titletext}{The title to be used in the output files.}
  \item{cutoff}{Enter locfdrcutoff if type=`RR', or fdrcutoff if type=`FDR'}
- \item{modes}{the number of assumed (null + nonnull) groups. Can be either 2 or 3
-(default=3)}
+ \item{modes}{the number of assumed (null + nonnull) groups. Can be either
+ 2 or 3 (default=3)}
 }
 
 \keyword{ documentation }

@@ -16,10 +16,10 @@ The response of interest  is the log2 fluorescence ratio (with respect
 to the common reference).
 }
 \usage{apoai}
-\format{A data frame containing 5,548 rows and 18 columns.  The first column contains
-the gene IDs, the second column contains the gene names.  Columns 3-11 contain the
-reponses for the 8 mice in the control group, and columns 12-18 contain the
-reponses for the 8 mice in the treatment group.}
+\format{A data frame containing 5,548 rows and 18 columns.  The first column
+contains the gene IDs, the second column contains the gene names.
+Columns 3-11 contain the reponses for the 8 mice in the control group,
+and columns 12-18 contain the reponses for the 8 mice in the treatment group.}
 \references{
 Callow, M. J., Dudoit, S., Gong, E. L., Speed, T. P. and Rubin,
 E. M. (2000). Microarray expression profiling identifies genes with altered
