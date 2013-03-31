@@ -578,7 +578,6 @@ saveAsCsv <- function(outdir,loadData=TRUE) {
     varsfile = sprintf("%s/AllData.RData",outdir)
     load(varsfile)
   }
-  if (getRversion() >= "2.15.1") globalVariables(c("dg","pBH0","RRfdr0","RRfdr1","RRfdr2"))
   csvf <- file(sprintf("%s/results.csv",outdir),"w")
   cat("Gene,ID,dg,BH,p_0,p_1,p_2\n", file=csvf)
   genename = gsub('^ +', '', genename)
