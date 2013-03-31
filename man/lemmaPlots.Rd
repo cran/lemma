@@ -18,7 +18,7 @@ printed.
 
 \arguments{
  \item{outdir}{The directory containing the RData file with the saved estimates
-and data from a previous invocation of lemma(). Default=`OUT' } 
+and data from a previous invocation of lemma(). Default=tempdir() } 
  \item{mgq}{The quantile used for plotting the \eqn{m_g} histogram.  Genes with 
 \eqn{m_g} values outside the mgq quantile are excluded from the plot.
 Default=0.99}

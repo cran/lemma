@@ -112,16 +112,15 @@ p-values or by their posterior null probabilities.
 }
 \examples{
 \dontrun{
-lemma(apoai,titletext="APO-AI, Callow et al (2000)",outdir="OUT/apoai",
-   plots=F)
-lemmaPlots("OUT/apoai",mgq=0.99, titletext="APO-AI (Callow et al., 2000)")
+lemma(apoai,titletext="APO-AI, Callow et al (2000)", plots=F)
+lemmaPlots(tempdir(),mgq=0.99, titletext="APO-AI (Callow et al., 2000)")
 
-lemma(simdata,titletext="Simulated data",outdir="OUT/simdata")
+lemma(simdata,titletext="Simulated data")
 
 # Similarly, if the user wants to use the 2-way classification:
-lemma(apoai,titletext="APO-AI, Callow et al (2000)",outdir="OUT/apoai",
+lemma(apoai,titletext="APO-AI, Callow et al (2000)",outdir=tempdir(),
   modes=2, plots=F)
-lemmaPlots("OUT/apoai",mgq=0.99,titletext="APO-AI (Callow et al., 2000)",
+lemmaPlots(tempdir(),mgq=0.99,titletext="APO-AI (Callow et al., 2000)",
       modes=2)
 }
 }

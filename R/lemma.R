@@ -14,6 +14,8 @@
 # Added an option to get Method-of-Moments estimates for the
 #   hyperparameters of prior distribution of the error variance
 
+  if (getRversion() >= "2.15.1") globalVariables(c("G","dg","n2","n1","p0","tau","sig2eb","p1","psi","sig2psi","p2","mg","f","alpha_hat","beta_hat","pBH0","RRfdr0","RRfdr1","RRfdr2","genename"))
+
 ##############################
 #
 # The EM algorithm functions - estimating the parameters of the
@@ -31,7 +33,7 @@ get.EM.est3 <- function(dg, sig2, n1, n2, logf, tol=0.0001, maxIts=20000,
 
   # set initial values:
   tau.old     = 0
-  psi.old     = 1
+  psi.old     = 20
   p1.old      = 0.1
   sig2psi.old = 1
 
@@ -576,6 +578,7 @@ saveAsCsv <- function(outdir,loadData=TRUE) {
     varsfile = sprintf("%s/AllData.RData",outdir)
     load(varsfile)
   }
+  if (getRversion() >= "2.15.1") globalVariables(c("dg","pBH0","RRfdr0","RRfdr1","RRfdr2"))
   csvf <- file(sprintf("%s/results.csv",outdir),"w")
   cat("Gene,ID,dg,BH,p_0,p_1,p_2\n", file=csvf)
   genename = gsub('^ +', '', genename)
@@ -604,7 +607,7 @@ printEst <- function(name, est, sd) {
 #
 
 lemma <- function(dataframe, locfdrcutoff=0.2, fdrcutoff=0.2, mgq=1,
-    titletext="",outdir="OUT",topgenes="nonnull", tol=1e-6, maxIts=50000,
+    titletext="",outdir=tempdir(),topgenes="nonnull", tol=1e-6, maxIts=50000,
     modes=3, plots=TRUE, saveascsv=TRUE, ErrVarEst="MLE") {
   if (!file.exists(outdir)) {
     if (.Platform$OS == "windows") {

@@ -95,7 +95,7 @@ treatment group 1}
 }
 
 \usage{ lemma(dataframe, locfdrcutoff=0.2, fdrcutoff=0.2, mgq=1,
-    titletext="", outdir="OUT", topgenes="nonnull", tol=1e-6,
+    titletext="", outdir=tempdir(), topgenes="nonnull", tol=1e-6,
     maxIts=50000, modes=3, plots=TRUE, saveascsv=TRUE,
     ErrVarEst="MLE") }
 
@@ -113,7 +113,7 @@ Default=0.2.}
 values.  Default=1.}
  \item{titletext}{The title to be used in the output files.}
  \item{outdir}{the output directory (use / as a directory separator, even on
-Windows).  Default=OUT.}
+Windows).  Default=tempdir().}
  \item{topgenes}{the number of genes to print (sorted in ascending order by
 local-fdr or adjusted p-value). Use `all' to print all the genes, or `nonnull'
 to print only the genes that are declared nonnull with the given local fdr or
@@ -136,16 +136,14 @@ for Method of Moments estimation (default=MLE).}
 
 \examples{
 \dontrun{
-lemma(apoai,titletext="APO-AI, Callow et al (2000)",outdir="OUT/apoai",
-   plots=F)
-lemmaPlots("OUT/apoai",mgq=0.99, titletext="APO-AI (Callow et al., 2000)")
+lemma(apoai,titletext="APO-AI, Callow et al (2000)", plots=F)
+lemmaPlots(tempdir(),mgq=0.99, titletext="APO-AI (Callow et al., 2000)")
 
-lemma(simdata,titletext="Simulated data",outdir="OUT/simdata")
+lemma(simdata,titletext="Simulated data")
 
 # Similarly, if the user wants to use the 2-way classification:
-lemma(apoai,titletext="APO-AI, Callow et al (2000)",outdir="OUT/apoai",
-  modes=2, plots=F)
-lemmaPlots("OUT/apoai",mgq=0.99,titletext="APO-AI (Callow et al., 2000)",
+lemma(apoai,titletext="APO-AI, Callow et al (2000)", modes=2, plots=F)
+lemmaPlots(tempdir(),mgq=0.99,titletext="APO-AI (Callow et al., 2000)",
       ErrVarEst="MM",modes=2)
 }
 }
