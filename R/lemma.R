@@ -14,7 +14,7 @@
 # Added an option to get Method-of-Moments estimates for the
 #   hyperparameters of prior distribution of the error variance
 
-  if (getRversion() >= "2.15.1") globalVariables(c("G","dg","n2","n1","p0","tau","sig2eb","p1","psi","sig2psi","p2","mg","f","alpha_hat","beta_hat","pBH0","RRfdr0","RRfdr1","RRfdr2","genename"))
+if (getRversion() >= "2.15.1") globalVariables(c("G","dg","n2","n1","p0","tau","sig2eb","p1","psi","sig2psi","p2","mg","f","alpha_hat","beta_hat","pBH0","RRfdr0","RRfdr1","RRfdr2","genename"))
 
 ##############################
 #
@@ -574,6 +574,7 @@ printTopGenes <- function(type,outdir,data0, data1, data2,
 }
 
 saveAsCsv <- function(outdir,loadData=TRUE) {
+
   if (loadData) {
     varsfile = sprintf("%s/AllData.RData",outdir)
     load(varsfile)

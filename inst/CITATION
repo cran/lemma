@@ -1,4 +1,4 @@
-desc <- packageDescription("LEMMA")
+desc <- packageDescription("lemma")
 year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", desc$Date)
 vers <- paste("R package version", desc$Version)
      

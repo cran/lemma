@@ -1,13 +1,13 @@
-73fc5b5af168d4f29130d23e792d473c *DESCRIPTION
+7f4581c8918618a0080b8feb75435db2 *DESCRIPTION
 d967bac5f92d1de879359c73f8ad382c *NAMESPACE
-758db0b9277a3ba446746defcd68a1ae *R/lemma.R
+e3ffae1bba407352eb78f35584125a10 *R/lemma.R
 3289dabe36b58a532b8fb5ce14a01307 *data/apoai.rda
 5f5a944cf61c13573dbbe445bd496a37 *data/colon.rda
 f0a05598430c1598065cfa1cb008d465 *data/datalist
 a41eca7b81271a9f8dd437dbc452637e *data/ecoli.rda
 effbc7bdd1f7e815bc65c591221425b6 *data/simdata.rda
 e07c37c74ff9a6cb885853633877cc2a *doc/LEMMAsummary.pdf
-6a2f2ab983685fbac936fb9cb610645a *inst/CITATION
+2a5920544519d3963b0457fe4838c916 *inst/CITATION
 dac3a9277ce1801573f04178b82a2dca *man/LEMMA-package.Rd
 589c596b06c2ec450e024ccda45347a7 *man/apoai.Rd
 0dffb38e819034029c27b7b445068069 *man/colon.Rd
